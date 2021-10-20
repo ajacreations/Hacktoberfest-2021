@@ -3,12 +3,12 @@ int insert(int a[],int n);
 int delete(int a[],int n);
 int reverse(int a[],int n);
 int search(int a[],int n);
-int main()
+int main(void)	// Execution of a program always start from main() function.
 {   
-    int n;
+    int n; //variable declaration
     printf("Enter the size of the array : ");
     scanf("%d",&n);
-    int a[n];	
+    int a[n];	//array of n size
 	int i, ch, pos;	
     printf("Enter the %d numbers \n",n);
 	for (i = 0; i < n; i++){
@@ -22,7 +22,8 @@ int main()
     printf("Press 3 to Reverse \n");
     printf("Press 4 to Search \n");
     printf("Press 5 to Exit \n");
-    scanf("%d",&ch);    
+    scanf("%d",&ch);   //it will take user input  
+	    
     switch (ch)
     {
     case 1:
@@ -38,8 +39,9 @@ int main()
         break; 
     case 4:
         search(a,n);
-        break;     //vvvcvcc      
-    default:
+        break;     //vvvcvcc 
+		    
+    default: 		//if no case will match then default execute
         printf("Gone too soon ");
         c=0;
         break;
